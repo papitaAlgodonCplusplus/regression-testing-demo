@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+main {
+    padding: 40px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    font-size: 2em;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #764ba2;
+    margin-bottom: 15px;
+}
+
+.intro {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+}
+
+.intro p {
+    font-size: 1.2em;
+}
+
+.scenario {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.scenario-header {
+    padding: 20px;
+    color: white;
+}
+
+.scenario-1 {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.scenario-2 {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.scenario-3 {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.scenario-content {
+    padding: 20px;
+}
+
+.scenario-content p {
+    margin-bottom: 10px;
+}
+
+.arrow {
+    text-align: center;
+    font-size: 3em;
+    color: #667eea;
+    margin: 20px 0;
+}
+
+code {
+    background: #2d3748;
+    color: #68d391;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block;
+    margin-top: 15px;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+}
+
+.comparison {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.strategy {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #e2e8f0;
+}
+
+.strategy h3 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.strategy-desc {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.strategy ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.strategy li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.metric {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.metric .label {
+    display: block;
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.metric .value {
+    display: block;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.vs {
+    font-size: 2em;
+    font-weight: bold;
+    color: #667eea;
+    text-align: center;
+}
+
+.findings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.finding {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.finding:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.finding-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.command-list {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.command-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.command-item:last-child {
+    border-bottom: none;
+}
+
+.command-item code {
+    flex: 0 0 auto;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.command-item span {
+    color: #666;
+}
+
+footer {
+    background: #2d3748;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .vs {
+        transform: rotate(90deg);
+        margin: 20px 0;
+    }
+
+    .findings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .command-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .command-item code {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}

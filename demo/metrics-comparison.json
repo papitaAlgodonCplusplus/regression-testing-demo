@@ -1,0 +1,86 @@
+{
+  "demo_metrics": {
+    "project": "E-commerce Regression Testing Demo",
+    "course": "CI-0142 Pruebas de Software - UCR",
+    "baseline": {
+      "total_tests": 50,
+      "passing_tests": 50,
+      "failing_tests": 0,
+      "execution_time_seconds": 0,
+      "coverage_percentage": 95
+    },
+    "with_new_feature": {
+      "total_tests": 60,
+      "passing_tests": 60,
+      "failing_tests": 0,
+      "execution_time_seconds": 0,
+      "coverage_percentage": 96,
+      "new_tests_added": 10
+    },
+    "with_regression": {
+      "total_tests": 60,
+      "passing_tests": 55,
+      "failing_tests": 5,
+      "execution_time_seconds": 0,
+      "coverage_percentage": 96,
+      "regression_detected": true,
+      "failing_test_file": "checkout.test.js",
+      "bug_description": "Tax calculation now incorrectly uses discounted amount instead of original subtotal"
+    },
+    "strategy_comparison": {
+      "re_test_all": {
+        "strategy": "Re-test All",
+        "tests_executed": 60,
+        "execution_time_seconds": 120,
+        "detected_regression": true,
+        "coverage": "100%",
+        "pros": [
+          "Maximum coverage",
+          "Absolute certainty",
+          "No tests omitted"
+        ],
+        "cons": [
+          "Time consuming",
+          "Resource intensive",
+          "Inefficient for small changes"
+        ],
+        "use_cases": [
+          "Critical releases",
+          "Production deployments",
+          "Major architectural changes"
+        ]
+      },
+      "selective": {
+        "strategy": "Selective Regression Testing",
+        "tests_executed": 15,
+        "execution_time_seconds": 30,
+        "detected_regression": true,
+        "coverage": "Focused on affected areas",
+        "time_saved_percentage": 75,
+        "tests_reduced_percentage": 75,
+        "pros": [
+          "Much faster execution",
+          "Immediate feedback",
+          "Ideal for CI/CD"
+        ],
+        "cons": [
+          "Requires dependency analysis",
+          "May miss indirect effects"
+        ],
+        "use_cases": [
+          "Frequent commits",
+          "Active development",
+          "CI/CD pipelines"
+        ]
+      }
+    },
+    "real_world_metrics": {
+      "description": "Based on literature review (Yoo & Harman, 2012)",
+      "time_reduction": "70-75%",
+      "effectiveness_maintained": "95%",
+      "typical_test_suite_size": "2000+ tests",
+      "typical_execution_time_full": "6 hours",
+      "typical_execution_time_selective": "45 minutes"
+    }
+  }
+}

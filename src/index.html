@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regression Testing Demo - UCR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧪 Regression Testing Demo</h1>
+            <p class="subtitle">CI-0142 Pruebas de Software - Universidad de Costa Rica</p>
+        </header>
+
+        <main>
+            <section class="intro">
+                <h2>¿Qué son las Pruebas de Regresión?</h2>
+                <p>Las pruebas de regresión verifican que el código que <strong>anteriormente funcionaba</strong>
+                sigue funcionando <strong>después de realizar cambios</strong> en el sistema.</p>
+            </section>
+
+            <section class="demo-flow">
+                <h2>Flujo del Demo</h2>
+
+                <div class="scenario">
+                    <div class="scenario-header scenario-1">
+                        <h3>📊 Escenario 1: Baseline</h3>
+                    </div>
+                    <div class="scenario-content">
+                        <p><strong>Estado:</strong> Sistema funcional con pruebas automatizadas</p>
+                        <p><strong>Resultado:</strong> ✅ 50 tests passing</p>
+                        <code>npm test</code>
+                    </div>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="scenario">
+                    <div class="scenario-header scenario-2">
+                        <h3>🎉 Escenario 2: Nueva Funcionalidad</h3>
+                    </div>
+                    <div class="scenario-content">
+                        <p><strong>Cambio:</strong> Se agrega sistema de cupones de descuento</p>
+                        <p><strong>Resultado:</strong> ✅ 60 tests passing (10 nuevos tests)</p>
+                        <code>node demo/scenario-2-new-feature.js</code>
+                    </div>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="scenario">
+                    <div class="scenario-header scenario-3">
+                        <h3>⚠️ Escenario 3: Regresión Detectada</h3>
+                    </div>
+                    <div class="scenario-content">
+                        <p><strong>Problema:</strong> Al integrar cupones, se rompió el cálculo de impuestos</p>
+                        <p><strong>Resultado:</strong> ❌ 5 tests failing (regresión detectada)</p>
+                        <code>cp src/checkout-buggy.js src/checkout.js && npm test</code>
+                    </div>
+                </div>
+            </section>
+
+            <section class="strategies">
+                <h2>Estrategias de Pruebas de Regresión</h2>
+
+                <div class="comparison">
+                    <div class="strategy">
+                        <h3>Re-test All</h3>
+                        <p class="strategy-desc">Ejecutar TODAS las pruebas</p>
+                        <ul>
+                            <li>✅ Cobertura máxima</li>
+                            <li>✅ Certeza absoluta</li>
+                            <li>⚠️ Consume mucho tiempo</li>
+                            <li>⚠️ Costoso en recursos</li>
+                        </ul>
+                        <div class="metrics">
+                            <div class="metric">
+                                <span class="label">Tests:</span>
+                                <span class="value">60</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">Tiempo:</span>
+                                <span class="value">~120s</span>
+                            </div>
+                        </div>
+                        <code>bash scripts/run-all-tests.sh</code>
+                    </div>
+
+                    <div class="vs">VS</div>
+
+                    <div class="strategy">
+                        <h3>Selective Testing</h3>
+                        <p class="strategy-desc">Ejecutar solo pruebas afectadas</p>
+                        <ul>
+                            <li>✅ 75% más rápido</li>
+                            <li>✅ Feedback inmediato</li>
+                            <li>✅ Ideal para CI/CD</li>
+                            <li>⚠️ Requiere análisis de dependencias</li>
+                        </ul>
+                        <div class="metrics">
+                            <div class="metric">
+                                <span class="label">Tests:</span>
+                                <span class="value">15</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">Tiempo:</span>
+                                <span class="value">~30s</span>
+                            </div>
+                        </div>
+                        <code>bash scripts/run-selected-tests.sh</code>
+                    </div>
+                </div>
+            </section>
+
+            <section class="key-findings">
+                <h2>Conclusiones Clave</h2>
+                <div class="findings-grid">
+                    <div class="finding">
+                        <div class="finding-icon">🎯</div>
+                        <h3>Propósito</h3>
+                        <p>Asegurar que funcionalidades existentes no se rompan con nuevos cambios</p>
+                    </div>
+                    <div class="finding">
+                        <div class="finding-icon">⚡</div>
+                        <h3>Eficiencia</h3>
+                        <p>Selective testing reduce 70-75% el tiempo manteniendo 95% de efectividad</p>
+                    </div>
+                    <div class="finding">
+                        <div class="finding-icon">🤖</div>
+                        <h3>Automatización</h3>
+                        <p>Esencial para viabilidad en entornos de desarrollo ágil y CI/CD</p>
+                    </div>
+                    <div class="finding">
+                        <div class="finding-icon">💰</div>
+                        <h3>ROI</h3>
+                        <p>Detectar bugs temprano es 10-100x más barato que en producción</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="commands">
+                <h2>Comandos Principales</h2>
+                <div class="command-list">
+                    <div class="command-item">
+                        <code>npm install</code>
+                        <span>Instalar dependencias</span>
+                    </div>
+                    <div class="command-item">
+                        <code>npm test</code>
+                        <span>Ejecutar todas las pruebas</span>
+                    </div>
+                    <div class="command-item">
+                        <code>bash scripts/demo-scenario.sh</code>
+                        <span>Demo automatizado completo</span>
+                    </div>
+                    <div class="command-item">
+                        <code>npm run test:coverage</code>
+                        <span>Generar reporte de cobertura</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p><strong>Equipo:</strong> Silvia Aguilar, Pablo Cascante, Javier Pupo, Alexander Quesada, Christian Rojas</p>
+            <p><strong>Profesor:</strong> Rubén González Villanueva</p>
+            <p><strong>Universidad de Costa Rica</strong> - Escuela de Ciencias de Computación e Informática</p>
+        </footer>
+    </div>
+</body>
+</html>
